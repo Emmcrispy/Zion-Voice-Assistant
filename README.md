@@ -196,7 +196,7 @@ Audio clips in `/clips/` are regenerated from TTS on every boot to pick up any v
 ## Known Limitations
 
 - WiFi required for all inference beyond wake word. No offline conversation fallback.
-- 86% wake word accuracy on the Edge Impulse test set. Occasional missed activations.
+- Wake word accuracy depends on your Edge Impulse model and training data. You will need to train your own model at edgeimpulse.com with your chosen wake phrase and export it as an Arduino library. For best results, record your training samples through the actual ICS-43434 microphone on the device, not through a phone or laptop mic. The frequency response and noise floor differ significantly between microphones, and a model trained on laptop audio will underperform on embedded hardware.
 - 2.5 to 7 second processing latency between question and response start.
 - TTS responses capped at roughly 15 seconds (768KB buffer at 24 kHz).
 - Omnidirectional mic picks up room noise. Sustained background audio can trigger false recordings.
