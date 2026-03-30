@@ -1,0 +1,27 @@
+# Secrets
+config.json
+
+# Build artifacts
+build/
+*.elf
+*.bin
+*.map
+*.hex
+
+# Arduino IDE
+*.ino.globals.h
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*~
+
+# SD card runtime files
+clips/
+prompts/
+tmp_img.png
+debug_rec.wav
